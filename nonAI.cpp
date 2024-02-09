@@ -13,7 +13,12 @@ int winpos[8][3] ={
 void print(){
     for(int i = 0; i <9; i+= 3){
         for(int j = i; j <i + 3; j++ ){
-            cout << board[j] << " ";             // prints the board
+                        if(board[j] == 2)
+            cout << "   " << "|";    
+        if(board[j] == 3)
+            cout << " X " << "|";          // prints the board
+        if(board[j] == 5)
+            cout << " O " << "|";
         } 
         cout << endl;
     }
